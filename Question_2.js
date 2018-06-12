@@ -13,7 +13,7 @@ For s = "4[ab]", the output should be decodeString(s) = "abababab"
 For s = "2[b3[a]]", the output should be decodeString(s) = "baaabaaa"
 */
 
-decodeString(s){
+function decodeString(s) {
   let stack = [];
   let result = [];
 

@@ -17,7 +17,7 @@ Example: for amount=4 (4¢) and denominations=[1,2,3] (1¢, 2¢ and 3¢), your p
 2¢, 2¢
 */
 
-changePossibilities(amount, demo){
+function changePossibilities(amount, demo) {
   var counts = new Array(amount + 1).fill(0);
   counts[0] = 1;
 
@@ -25,7 +25,6 @@ changePossibilities(amount, demo){
     for (let i = coin; i <= amount; i++) {
       let remainder = i - coin;
       counts[i] += counts[remainder];
-      console.log(counts);
     }
   });
   return counts[counts.length - 1];
